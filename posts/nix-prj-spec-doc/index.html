@@ -26,7 +26,7 @@
     <span class=n>sage</span>
     <span class=n>which</span>
   <span class=p>];</span>
-<span class=p>}</span></code></pre></div><p>The highlighted line calls <code>nsymengine.nix</code> which is derived from the upstream expression. Since <code>callPackage</code> is being used from the <code>niv</code> pinned sources, the expression is completely project-specific and reproducible.</p><h3 id=upstream>Upstream</h3><p>For completion; the upstream expression is reproduced. We will actually grab this directly with <code>show-derivation</code>:</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>nix show-derivation -f <span class=s2>&#34;&lt;nixpkgs&gt;&#34;</span> symengine &gt;&gt; nsymengine.nix
+<span class=p>}</span></code></pre></div><p>The highlighted line calls <code>nsymengine.nix</code> which is derived from the upstream expression. Since <code>callPackage</code> is being used from the <code>niv</code> pinned sources, the expression is completely project-specific and reproducible.</p><h3 id=upstream>Upstream</h3><p>For completion; the upstream expression is reproduced. We will actually grab this directly with <code>show-derivation</code>:</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>nix show-derivation -f <span class=s2>&#34;&lt;nixpkgs&gt;&#34;</span> symengine &gt; nix/nsymengine.nix
 </code></pre></div><p>Which gives us:</p><div class=highlight><pre class=chroma><code class=language-nix data-lang=nix><span class=p>{</span> <span class=n>lib</span><span class=o>,</span> <span class=n>stdenv</span>
 <span class=o>,</span> <span class=n>fetchFromGitHub</span>
 <span class=o>,</span> <span class=n>cmake</span>
