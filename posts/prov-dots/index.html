@@ -69,8 +69,8 @@ first<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></su
 sys-admin to install <code>nix</code> system-wide in multi-user mode.</p><h2 id=giving-up-with-linuxbrew>Giving Up with Linuxbrew</h2><ul><li>Somewhere around this point, <a href=https://docs.brew.sh/Homebrew-on-Linux>linuxbrew</a> is a good idea</li><li>More on this later</li></ul><h2 id=shell-stuff>Shell Stuff</h2><p><code>zsh</code> is my shell of choice, and is what my <code>Dotfiles</code> expect and work best with.</p><ul><li>I did end up making a quick change to update the <code>dotfiles</code> with a target
 which includes a snippet to transition to <code>zsh</code> from the default <code>bash</code> shell</li></ul><h2 id=dotfiles>Dotfiles</h2><p>The actual installation steps basically tracks <a href=https://github.com/HaoZeke/Dotfiles>the readme instructions</a>.</p><div class=highlight><pre class=chroma><code class=language-bash data-lang=bash>git clone https://github.com/kobus-v-schoor/dotgit.git
 mkdir -p ~/.bin
-cp -r dotgit/bin/dotgit* ~/.bin
-cat dotgit/bin/bash_completion &gt;&gt; ~/.bash_completion
+cp -r dotgit/old/bin/dotgit* ~/.bin
+cat dotgit/old/bin/bash_completion &gt;&gt; ~/.bash_completion
 rm -rf dotgit
 <span class=c1># echo &#39;export PATH=&#34;$PATH:$HOME/.bin&#34;&#39; &gt;&gt; ~/.bashrc</span>
 <span class=nb>echo</span> <span class=s1>&#39;export PATH=&#34;$PATH:$HOME/.bin&#34;&#39;</span> &gt;&gt; ~/.zshrc
